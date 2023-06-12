@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Registro de Calificaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input type="text" [(ngModel)]="apellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Aporte 1</ion-label>
+      <ion-input type="number" [(ngModel)]="aportes[0]" (ionChange)="calcularResultado()" min="0" max="10"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Aporte 2</ion-label>
+      <ion-input type="number" [(ngModel)]="aportes[1]" (ionChange)="calcularResultado()" min="0" max="10"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Aporte 3</ion-label>
+      <ion-input type="number" [(ngModel)]="aportes[2]" (ionChange)="calcularResultado()" min="0" max="10"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Aporte 4</ion-label>
+      <ion-input type="number" [(ngModel)]="aportes[3]" (ionChange)="calcularResultado()" min="0" max="10"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Aporte 5</ion-label>
+      <ion-input type="number" [(ngModel)]="aportes[4]" (ionChange)="calcularResultado()" min="0" max="10"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Resultado</ion-label>
+      <ion-input type="number" readonly="true" [value]="resultado"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="goToshow()">Guardar</ion-button>
+</ion-content>

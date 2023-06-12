@@ -1,0 +1,19 @@
+ion-content {
+  --background: linear-gradient(to bottom, #baf7dd, #057bf1);
+
+}
+
+ion-button[type="submit"] {
+  --background: #77e060;
+  --color: #000000;
+}
+
+ion-button[type="button"] {
+  --background: #c937e3;
+  --color: #000000;
+}
+
+ion-input {
+  --background: #ffffff;
+  --color: #000000;
+}
